@@ -1,0 +1,85 @@
+import { CacheSettingsOriginH2MaxStreamsResponseValueEntity } from './entity/CacheSettingsOriginH2MaxStreamsResponseValueEntity';
+import { ConfigEntity } from './entity/ConfigEntity';
+import { CsamConfigServiceCsamScannerSingleEntity } from './entity/CsamConfigServiceCsamScannerSingleEntity';
+import { DefaultEntity } from './entity/DefaultEntity';
+import { GoogleTagGatewayEntity } from './entity/GoogleTagGatewayEntity';
+import { NelEntity } from './entity/NelEntity';
+import { RumEntity } from './entity/RumEntity';
+import { ZarazEntity } from './entity/ZarazEntity';
+import { ZarazZarazConfigEntity } from './entity/ZarazZarazConfigEntity';
+import { ZarazZarazConfigHistoryEntity } from './entity/ZarazZarazConfigHistoryEntity';
+import { ZarazZarazConfigReturnEntity } from './entity/ZarazZarazConfigReturnEntity';
+import { ZarazZarazHistoryEntity } from './entity/ZarazZarazHistoryEntity';
+import { ZarazZarazWorkflowEntity } from './entity/ZarazZarazWorkflowEntity';
+import { ZoneSettingEntity } from './entity/ZoneSettingEntity';
+import { ZonesZoneSettingsResponseCollectionEntity } from './entity/ZonesZoneSettingsResponseCollectionEntity';
+export type * from './CloudflareZoneSettingsTypes';
+import { inspect } from 'node:util';
+import type { Context, Feature } from './types';
+import { config } from './Config';
+import { CloudflareZoneSettingsEntityBase } from './CloudflareZoneSettingsEntityBase';
+import { Utility } from './utility/Utility';
+import { BaseFeature } from './feature/base/BaseFeature';
+declare const stdutil: Utility;
+declare class CloudflareZoneSettingsSDK {
+    _mode: string;
+    _options: any;
+    _utility: Utility;
+    _features: Feature[];
+    _rootctx: Context;
+    constructor(options?: any);
+    options(): any;
+    utility(): any;
+    prepare(fetchargs?: any): Promise<any>;
+    direct(fetchargs?: any): Promise<Error | {
+        ok: boolean;
+        status: number;
+        headers: any;
+        data: any;
+        err?: undefined;
+    } | {
+        ok: boolean;
+        err: any;
+        status?: undefined;
+        headers?: undefined;
+        data?: undefined;
+    }>;
+    _rawRequest(fetchargs?: any): Promise<Error | {
+        ok: boolean;
+        status: number;
+        headers: any;
+        data: any;
+        err?: undefined;
+    } | {
+        ok: boolean;
+        err: any;
+        status?: undefined;
+        headers?: undefined;
+        data?: undefined;
+    }>;
+    graphql(query: string, variables?: any, ctrl?: any): Promise<any>;
+    CacheSettingsOriginH2MaxStreamsResponseValue(entopts?: Record<string, any>): CacheSettingsOriginH2MaxStreamsResponseValueEntity;
+    Config(entopts?: Record<string, any>): ConfigEntity;
+    CsamConfigServiceCsamScannerSingle(entopts?: Record<string, any>): CsamConfigServiceCsamScannerSingleEntity;
+    Default(entopts?: Record<string, any>): DefaultEntity;
+    GoogleTagGateway(entopts?: Record<string, any>): GoogleTagGatewayEntity;
+    Nel(entopts?: Record<string, any>): NelEntity;
+    Rum(entopts?: Record<string, any>): RumEntity;
+    Zaraz(entopts?: Record<string, any>): ZarazEntity;
+    ZarazZarazConfig(entopts?: Record<string, any>): ZarazZarazConfigEntity;
+    ZarazZarazConfigHistory(entopts?: Record<string, any>): ZarazZarazConfigHistoryEntity;
+    ZarazZarazConfigReturn(entopts?: Record<string, any>): ZarazZarazConfigReturnEntity;
+    ZarazZarazHistory(entopts?: Record<string, any>): ZarazZarazHistoryEntity;
+    ZarazZarazWorkflow(entopts?: Record<string, any>): ZarazZarazWorkflowEntity;
+    ZoneSetting(entopts?: Record<string, any>): ZoneSettingEntity;
+    ZonesZoneSettingsResponseCollection(entopts?: Record<string, any>): ZonesZoneSettingsResponseCollectionEntity;
+    static test(testoptsarg?: any, sdkoptsarg?: any): CloudflareZoneSettingsSDK;
+    tester(testopts?: any, sdkopts?: any): CloudflareZoneSettingsSDK;
+    toJSON(): {
+        name: string;
+    };
+    toString(): string;
+    [inspect.custom](): string;
+}
+declare const SDK: typeof CloudflareZoneSettingsSDK;
+export { stdutil, config, BaseFeature, CloudflareZoneSettingsEntityBase, CloudflareZoneSettingsSDK, SDK, };

@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "default": {
+      "DEFAULT00": {
+        "errors": [],
+        "messages": [],
+        "result": "s2a",
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "DEFAULT01": {
+        "errors": [],
+        "messages": [],
+        "result": "s52",
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "DEFAULT02": {
+        "errors": [],
+        "messages": [],
+        "result": "s7a",
+        "success": false,
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "default": {
+      "default_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": "sa2",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/zaraz/default": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

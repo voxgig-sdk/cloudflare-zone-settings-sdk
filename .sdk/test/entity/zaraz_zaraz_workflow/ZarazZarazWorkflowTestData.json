@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "zaraz_zaraz_workflow": {
+      "ZARAZ_ZARAZ_WORKFLOW00": {
+        "errors": [],
+        "messages": [],
+        "result": "s2a",
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_WORKFLOW00"
+      },
+      "ZARAZ_ZARAZ_WORKFLOW01": {
+        "errors": [],
+        "messages": [],
+        "result": "s52",
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_WORKFLOW01"
+      },
+      "ZARAZ_ZARAZ_WORKFLOW02": {
+        "errors": [],
+        "messages": [],
+        "result": "s7a",
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_WORKFLOW02"
+      }
+    }
+  },
+  "new": {
+    "zaraz_zaraz_workflow": {
+      "zaraz_zaraz_workflow_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": "sa2",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/zaraz/workflow": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/settings/zaraz/workflow": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

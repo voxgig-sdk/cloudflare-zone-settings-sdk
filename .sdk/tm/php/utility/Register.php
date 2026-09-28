@@ -1,0 +1,70 @@
+<?php
+declare(strict_types=1);
+
+// CloudflareZoneSettings SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+CloudflareZoneSettingsUtility::setRegistrar(function (CloudflareZoneSettingsUtility $u): void {
+    $u->clean = [CloudflareZoneSettingsClean::class, 'call'];
+    $u->done = [CloudflareZoneSettingsDone::class, 'call'];
+    $u->make_error = [CloudflareZoneSettingsMakeError::class, 'call'];
+    $u->feature_add = [CloudflareZoneSettingsFeatureAdd::class, 'call'];
+    $u->feature_hook = [CloudflareZoneSettingsFeatureHook::class, 'call'];
+    $u->feature_init = [CloudflareZoneSettingsFeatureInit::class, 'call'];
+    $u->fetcher = [CloudflareZoneSettingsFetcher::class, 'call'];
+    $u->make_fetch_def = [CloudflareZoneSettingsMakeFetchDef::class, 'call'];
+    $u->make_context = [CloudflareZoneSettingsMakeContext::class, 'call'];
+    $u->make_options = [CloudflareZoneSettingsMakeOptions::class, 'call'];
+    $u->make_request = [CloudflareZoneSettingsMakeRequest::class, 'call'];
+    $u->make_response = [CloudflareZoneSettingsMakeResponse::class, 'call'];
+    $u->make_result = [CloudflareZoneSettingsMakeResult::class, 'call'];
+    $u->make_point = [CloudflareZoneSettingsMakePoint::class, 'call'];
+    $u->make_spec = [CloudflareZoneSettingsMakeSpec::class, 'call'];
+    $u->make_url = [CloudflareZoneSettingsMakeUrl::class, 'call'];
+    $u->param = [CloudflareZoneSettingsParam::class, 'call'];
+    $u->prepare_auth = [CloudflareZoneSettingsPrepareAuth::class, 'call'];
+    $u->prepare_body = [CloudflareZoneSettingsPrepareBody::class, 'call'];
+    $u->prepare_headers = [CloudflareZoneSettingsPrepareHeaders::class, 'call'];
+    $u->prepare_method = [CloudflareZoneSettingsPrepareMethod::class, 'call'];
+    $u->prepare_params = [CloudflareZoneSettingsPrepareParams::class, 'call'];
+    $u->prepare_path = [CloudflareZoneSettingsPreparePath::class, 'call'];
+    $u->prepare_query = [CloudflareZoneSettingsPrepareQuery::class, 'call'];
+    $u->graphql_body = [CloudflareZoneSettingsGraphql::class, 'body'];
+    $u->graphql_errors = [CloudflareZoneSettingsGraphql::class, 'errors'];
+    $u->result_basic = [CloudflareZoneSettingsResultBasic::class, 'call'];
+    $u->result_body = [CloudflareZoneSettingsResultBody::class, 'call'];
+    $u->result_headers = [CloudflareZoneSettingsResultHeaders::class, 'call'];
+    $u->transform_request = [CloudflareZoneSettingsTransformRequest::class, 'call'];
+    $u->transform_response = [CloudflareZoneSettingsTransformResponse::class, 'call'];
+});

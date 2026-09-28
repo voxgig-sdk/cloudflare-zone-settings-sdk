@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ZarazZarazConfig | Cloudflare Zone Settings</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#content">Skip to content</a>
+<header class="site-header"><a class="site-title" href="../index.html">Cloudflare Zone Settings<span>SDK documentation</span></a><div class="site-links"><a class="repo-link" href="https://github.com/voxgig-sdk/cloudflare-zone-settings-sdk">voxgig-sdk/cloudflare-zone-settings-sdk</a></div></header>
+<div class="site-notice" role="note"></div>
+<div class="shell"><nav class="site-nav" aria-label="Documentation"><div class="search"><label for="search">Search documentation</label><input id="search" type="search" data-base="../" placeholder="Find a guide or reference"><div id="results" aria-live="polite"></div></div><details><summary>Overview</summary><a href="../index.html">Cloudflare Zone Settings</a></details>
+<details open><summary>API</summary><a href="../api/index.html">API overview</a>
+<a href="../api/cache_settings_origin_h2_max_streams_response_value.html">CacheSettingsOriginH2MaxStreamsResponseValue</a>
+<a href="../api/config.html">Config</a>
+<a href="../api/csam_config_service_csam_scanner_single.html">CsamConfigServiceCsamScannerSingle</a>
+<a href="../api/default.html">Default</a>
+<a href="../api/google_tag_gateway.html">GoogleTagGateway</a>
+<a href="../api/nel.html">Nel</a>
+<a href="../api/rum.html">Rum</a>
+<a href="../api/zaraz.html">Zaraz</a>
+<a aria-current="page" href="../api/zaraz_zaraz_config.html">ZarazZarazConfig</a><div class="nav-sections"><a class="nav-section" href="#put-zoneszone_idsettingszarazconfig">PUT /zones/{zone_id}/settings/zaraz/config</a>
+<a class="nav-section" href="#put-zoneszone_idsettingszarazhistory">PUT /zones/{zone_id}/settings/zaraz/history</a></div>
+<a href="../api/zaraz_zaraz_config_history.html">ZarazZarazConfigHistory</a>
+<a href="../api/zaraz_zaraz_config_return.html">ZarazZarazConfigReturn</a>
+<a href="../api/zaraz_zaraz_history.html">ZarazZarazHistory</a>
+<a href="../api/zaraz_zaraz_workflow.html">ZarazZarazWorkflow</a>
+<a href="../api/zone_setting.html">ZoneSetting</a>
+<a href="../api/zones_zone_settings_response_collection.html">ZonesZoneSettingsResponseCollection</a></details>
+<details><summary>Guides</summary><a href="../guides/authentication.html">Authentication</a>
+<a href="../guides/first-call.html">Make your first API call</a>
+<a href="../guides/errors.html">Handle errors</a>
+<a href="../guides/concepts.html">Entities, SDKs, and tools</a></details>
+<details><summary>SDKs</summary><a href="../sdks/go.html">Golang</a>
+<a href="../sdks/lua.html">Lua</a>
+<a href="../sdks/php.html">PHP</a>
+<a href="../sdks/py.html">Python</a>
+<a href="../sdks/rb.html">Ruby</a>
+<a href="../sdks/ts.html">TypeScript</a></details>
+<details><summary>Tools</summary><a href="../tools/go-cli.html">Go CLI</a>
+<a href="../tools/go-mcp.html">Go MCP server</a></details>
+<details><summary>Features</summary><a href="../features/test.html">Test transport</a></details></nav><main id="content"><div class="page-context"><span class="section-dot" aria-hidden="true"></span>API</div><h1 id="zarazzarazconfig">ZarazZarazConfig</h1>
+<h2 id="operations">Operations</h2>
+<p>Every route this entity exposes. Each route links to its own reference on this page.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>SDK operation</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PUT</code></td>
+<td><a href="#put-zoneszone_idsettingszarazconfig"><code>/zones/{zone_id}/settings/zaraz/config</code></a></td>
+<td><code>update</code></td>
+<td>Update Zaraz configuration response</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><a href="#put-zoneszone_idsettingszarazhistory"><code>/zones/{zone_id}/settings/zaraz/history</code></a></td>
+<td><code>update</code></td>
+<td>Restore Zaraz historical configuration by ID response</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>One example per SDK, generated from the API model. The argument names are the parameters and fields of this entity, and the values are placeholders. The examples are not compiled or executed.</p>
+<h3 id="golang">Golang</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/go.html#set-up-the-client">Golang setup</a>, then call the operations:</p>
+<pre><code class="language-go">updated, err := client.ZarazZarazConfig(nil).Update(map[string]any{&quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(updated)
+</code></pre>
+<h3 id="lua">Lua</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/lua.html#set-up-the-client">Lua setup</a>, then call the operations:</p>
+<pre><code class="language-lua">local updated, err = client:ZarazZarazConfig():update({ zone_id = &quot;example&quot; })
+</code></pre>
+<h3 id="php">PHP</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/php.html#set-up-the-client">PHP setup</a>, then call the operations:</p>
+<pre><code class="language-php">$updated = $client-&gt;ZarazZarazConfig()-&gt;update([&quot;zone_id&quot; =&gt; &quot;example&quot;]);
+</code></pre>
+<h3 id="python">Python</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/py.html#set-up-the-client">Python setup</a>, then call the operations:</p>
+<pre><code class="language-py">updated = client.ZarazZarazConfig().update({&quot;zone_id&quot;: &quot;example&quot;})
+</code></pre>
+<h3 id="ruby">Ruby</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/rb.html#set-up-the-client">Ruby setup</a>, then call the operations:</p>
+<pre><code class="language-rb">updated = client.ZarazZarazConfig.update({ &quot;zone_id&quot; =&gt; &quot;example&quot; })
+</code></pre>
+<h3 id="typescript">TypeScript</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/ts.html#set-up-the-client">TypeScript setup</a>, then call the operations:</p>
+<pre><code class="language-ts">const updated = await client.ZarazZarazConfig().update({ zone_id: &quot;example&quot; })
+</code></pre>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<h2 id="update">update</h2>
+<h3 id="put-zoneszone_idsettingszarazconfig" class="operation" data-method="put"><code>PUT</code> /zones/{zone_id}/settings/zaraz/config</h3>
+<p>Operation ID: <code>put-zones-zone_identifier-zaraz-config</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body">Request body</h4>
+<p><code>application/json</code></p>
+<p>The request body is <code>object and object</code>.</p>
+<h4 id="responses">Responses</h4>
+<h5 id="200-update-zaraz-configuration-response" class="status" data-status="2xx">200: Update Zaraz configuration response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-update-zaraz-configuration-response-failure">4XX: Update Zaraz configuration response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="put-zoneszone_idsettingszarazhistory" class="operation" data-method="put"><code>PUT</code> /zones/{zone_id}/settings/zaraz/history</h3>
+<p>Operation ID: <code>put-zones-zone_identifier-zaraz-history</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-1">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-1">Request body</h4>
+<p><code>application/json</code></p>
+<p>The request body is <code>integer</code>.</p>
+<h4 id="responses-1">Responses</h4>
+<h5 id="200-restore-zaraz-historical-configuration-by-id-response" class="status" data-status="2xx">200: Restore Zaraz historical configuration by ID response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-restore-zaraz-historical-configuration-by-id-failure">4XX: Restore Zaraz historical configuration by ID failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+</main></div>
+<script src="../assets/search.js" defer></script></body></html>

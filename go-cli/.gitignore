@@ -1,0 +1,4 @@
+/dist/
+/cloudflare-zone-settings-cli
+/go-cli
+.jostraca/

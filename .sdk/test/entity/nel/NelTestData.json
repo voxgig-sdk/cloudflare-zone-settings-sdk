@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "nel": {
+      "NEL00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": {},
+        "zone_id": "ZONE01",
+        "id": "NEL00"
+      },
+      "NEL01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": {},
+        "zone_id": "ZONE01",
+        "id": "NEL01"
+      },
+      "NEL02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": {},
+        "zone_id": "ZONE01",
+        "id": "NEL02"
+      }
+    }
+  },
+  "new": {
+    "nel": {
+      "nel_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/nel": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/nel": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

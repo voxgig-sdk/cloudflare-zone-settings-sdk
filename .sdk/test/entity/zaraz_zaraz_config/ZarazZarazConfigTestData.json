@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "zaraz_zaraz_config": {
+      "ZARAZ_ZARAZ_CONFIG00": {
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_CONFIG00"
+      },
+      "ZARAZ_ZARAZ_CONFIG01": {
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_CONFIG01"
+      },
+      "ZARAZ_ZARAZ_CONFIG02": {
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_CONFIG02"
+      }
+    }
+  },
+  "new": {
+    "zaraz_zaraz_config": {
+      "zaraz_zaraz_config_ref01": {}
+    }
+  },
+  "requests": {
+    "PUT /zones/{zone_id}/settings/zaraz/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/settings/zaraz/history": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

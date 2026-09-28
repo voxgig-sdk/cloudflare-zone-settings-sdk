@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "zaraz": {
+      "ZARAZ00": {
+        "zone_id": "ZONE01",
+        "id": "ZARAZ00"
+      },
+      "ZARAZ01": {
+        "zone_id": "ZONE01",
+        "id": "ZARAZ01"
+      },
+      "ZARAZ02": {
+        "zone_id": "ZONE01",
+        "id": "ZARAZ02"
+      }
+    }
+  },
+  "new": {
+    "zaraz": {
+      "zaraz_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/settings/zaraz/publish": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

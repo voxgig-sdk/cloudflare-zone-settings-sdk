@@ -1,0 +1,26 @@
+# BasicZarazZarazConfigHistoryFlow
+
+main: kit: flow: BasicZarazZarazConfigHistoryFlow:
+{
+  entity: "zaraz_zaraz_config_history",
+  kind: "basic",
+  name: "BasicZarazZarazConfigHistoryFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "zaraz_zaraz_config_history_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicZarazZarazConfigHistoryFlow"
+}

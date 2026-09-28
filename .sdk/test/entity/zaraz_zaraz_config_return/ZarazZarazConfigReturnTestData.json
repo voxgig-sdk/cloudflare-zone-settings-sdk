@@ -1,0 +1,71 @@
+{
+  "existing": {
+    "zaraz_zaraz_config_return": {
+      "ZARAZ_ZARAZ_CONFIG_RETURN00": {
+        "analytics": {},
+        "consent": {},
+        "dataLayer": true,
+        "debugKey": "s67",
+        "historyChange": true,
+        "settings": {},
+        "tools": {},
+        "triggers": {},
+        "variables": {},
+        "zarazVersion": 109,
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_CONFIG_RETURN00"
+      },
+      "ZARAZ_ZARAZ_CONFIG_RETURN01": {
+        "analytics": {},
+        "consent": {},
+        "dataLayer": true,
+        "debugKey": "scb",
+        "historyChange": true,
+        "settings": {},
+        "tools": {},
+        "triggers": {},
+        "variables": {},
+        "zarazVersion": 209,
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_CONFIG_RETURN01"
+      },
+      "ZARAZ_ZARAZ_CONFIG_RETURN02": {
+        "analytics": {},
+        "consent": {},
+        "dataLayer": true,
+        "debugKey": "s12f",
+        "historyChange": true,
+        "settings": {},
+        "tools": {},
+        "triggers": {},
+        "variables": {},
+        "zarazVersion": 309,
+        "zone_id": "ZONE01",
+        "id": "ZARAZ_ZARAZ_CONFIG_RETURN02"
+      }
+    }
+  },
+  "new": {
+    "zaraz_zaraz_config_return": {
+      "zaraz_zaraz_config_return_ref01": {
+        "analytics": {},
+        "consent": {},
+        "dataLayer": true,
+        "debugKey": "s193",
+        "historyChange": true,
+        "settings": {},
+        "tools": {},
+        "triggers": {},
+        "variables": {},
+        "zarazVersion": 409
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/zaraz/export": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# BasicZarazZarazConfigReturnFlow
+
+main: kit: flow: BasicZarazZarazConfigReturnFlow:
+{
+  entity: "zaraz_zaraz_config_return",
+  kind: "basic",
+  name: "BasicZarazZarazConfigReturnFlow",
+  step: [
+    {
+      i: {
+        ref: "zaraz_zaraz_config_return_ref01",
+        srcdatavar: "zaraz_zaraz_config_return_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "zaraz_zaraz_config_return01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-zaraz_zaraz_config_return_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicZarazZarazConfigReturnFlow"
+}

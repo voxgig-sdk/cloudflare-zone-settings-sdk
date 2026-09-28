@@ -1,0 +1,45 @@
+# BasicZarazZarazWorkflowFlow
+
+main: kit: flow: BasicZarazZarazWorkflowFlow:
+{
+  entity: "zaraz_zaraz_workflow",
+  kind: "basic",
+  name: "BasicZarazZarazWorkflowFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "zaraz_zaraz_workflow_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "zaraz_zaraz_workflow_ref01",
+        srcdatavar: "zaraz_zaraz_workflow_ref01_data",
+        suffix: "_up0",
+        textfield: "result"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-zaraz_zaraz_workflow_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicZarazZarazWorkflowFlow"
+}

@@ -1,0 +1,166 @@
+{
+  "existing": {
+    "zone_setting": {
+      "ZONE_SETTING00": {
+        "errors": [],
+        "id": "ZONE_SETTING00",
+        "messages": [],
+        "result": {},
+        "success": true,
+        "value": {},
+        "zone_id": "ZONE01"
+      },
+      "ZONE_SETTING01": {
+        "errors": [],
+        "id": "ZONE_SETTING01",
+        "messages": [],
+        "result": {},
+        "success": true,
+        "value": {},
+        "zone_id": "ZONE01"
+      },
+      "ZONE_SETTING02": {
+        "errors": [],
+        "id": "ZONE_SETTING02",
+        "messages": [],
+        "result": {},
+        "success": true,
+        "value": {},
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "zone_setting": {
+      "zone_setting_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": true,
+        "value": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/automatic_platform_optimization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/binary_ast": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/fonts": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/h2_prioritization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/image_resizing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/speed_brain": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/transformations_allowed_origins": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/transformations_c2pa": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/transformations_config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/{setting_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/aegis": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/settings/origin_max_http_version": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/{setting_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/aegis": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/automatic_platform_optimization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/binary_ast": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/fonts": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/h2_prioritization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/image_resizing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/origin_max_http_version": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/speed_brain": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/transformations_allowed_origins": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/transformations_c2pa": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/transformations_config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

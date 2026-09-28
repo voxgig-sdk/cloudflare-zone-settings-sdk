@@ -1,0 +1,148 @@
+# Entity: zaraz_zaraz_config_return
+
+main: kit: entity: zaraz_zaraz_config_return: {
+
+  alias: field: {}
+
+  fields: {
+    analytics: {
+      h: "Analytics"
+      n: "analytics"
+      r: false
+      sh: "Cloudflare Monitoring settings."
+      t: "`$OBJECT`"
+    }
+    consent: {
+      h: "Consent"
+      n: "consent"
+      r: true
+      sh: "Consent management configuration."
+      t: "`$OBJECT`"
+    }
+    dataLayer: {
+      h: "Data Layer"
+      n: "dataLayer"
+      r: true
+      sh: "Data layer compatibility mode enabled."
+      t: "`$BOOLEAN`"
+    }
+    debugKey: {
+      h: "Debug Key"
+      n: "debugKey"
+      r: true
+      sh: "The key for Zaraz debug mode."
+      t: "`$STRING`"
+    }
+    historyChange: {
+      h: "History Change"
+      n: "historyChange"
+      r: false
+      sh: "Single Page Application support enabled."
+      t: "`$BOOLEAN`"
+    }
+    settings: {
+      h: "Settings"
+      n: "settings"
+      r: true
+      sh: "General Zaraz settings."
+      t: "`$OBJECT`"
+    }
+    tools: {
+      h: "Tools"
+      n: "tools"
+      r: false
+      sh: "Tools set up under Zaraz configuration, where key is the alpha-numeric tool ID and value is the tool configuration object."
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 5
+        depth: 10
+      }
+    }
+    triggers: {
+      h: "Triggers"
+      n: "triggers"
+      r: true
+      sh: "Triggers set up under Zaraz configuration, where key is the trigger alpha-numeric ID and value is the trigger configuration."
+      t: "`$OBJECT`"
+      union: {
+        branches: 7
+        count: 2
+        depth: 4
+      }
+    }
+    variables: {
+      h: "Variables"
+      n: "variables"
+      r: true
+      sh: "Variables set up under Zaraz configuration, where key is the variable alpha-numeric ID and value is the variable configuration."
+      t: "`$OBJECT`"
+    }
+    zarazVersion: {
+      h: "Zaraz Version"
+      n: "zarazVersion"
+      r: true
+      sh: "Zaraz internal version of the config."
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "zaraz_zaraz_config_return"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/settings/zaraz/export"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/settings/zaraz/export"
+          q: {
+            exist: [
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "settings"
+            }
+            {
+              lit: "zaraz"
+            }
+            {
+              lit: "export"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

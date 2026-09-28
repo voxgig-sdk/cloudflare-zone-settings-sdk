@@ -1,0 +1,44 @@
+# BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow
+
+main: kit: flow: BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow:
+{
+  entity: "cache_settings_origin_h2_max_streams_response_value",
+  kind: "basic",
+  name: "BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "cache_settings_origin_h2_max_streams_response_value_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "cache_settings_origin_h2_max_streams_response_value_ref01",
+        srcdatavar: "cache_settings_origin_h2_max_streams_response_value_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-cache_settings_origin_h2_max_streams_response_value_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow"
+}

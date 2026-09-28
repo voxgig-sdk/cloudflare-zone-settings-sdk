@@ -1,0 +1,26 @@
+# BasicDefaultFlow
+
+main: kit: flow: BasicDefaultFlow:
+{
+  entity: "default",
+  kind: "basic",
+  name: "BasicDefaultFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "default_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDefaultFlow"
+}

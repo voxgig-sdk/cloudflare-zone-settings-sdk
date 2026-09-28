@@ -1,0 +1,22 @@
+# BasicZarazFlow
+
+main: kit: flow: BasicZarazFlow:
+{
+  entity: "zaraz",
+  kind: "basic",
+  name: "BasicZarazFlow",
+  step: [
+    {
+      i: {
+        ref: "zaraz_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicZarazFlow"
+}

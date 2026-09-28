@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "cache_settings_origin_h2_max_streams_response_value": {
+      "CACHE_SETTINGS_ORIGIN_H2_MAX_STREAMS_RESPONSE_VALUE00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": 54,
+        "zone_id": "ZONE01",
+        "id": "CACHE_SETTINGS_ORIGIN_H2_MAX_STREAMS_RESPONSE_VALUE00"
+      },
+      "CACHE_SETTINGS_ORIGIN_H2_MAX_STREAMS_RESPONSE_VALUE01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": 104,
+        "zone_id": "ZONE01",
+        "id": "CACHE_SETTINGS_ORIGIN_H2_MAX_STREAMS_RESPONSE_VALUE01"
+      },
+      "CACHE_SETTINGS_ORIGIN_H2_MAX_STREAMS_RESPONSE_VALUE02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": 154,
+        "zone_id": "ZONE01",
+        "id": "CACHE_SETTINGS_ORIGIN_H2_MAX_STREAMS_RESPONSE_VALUE02"
+      }
+    }
+  },
+  "new": {
+    "cache_settings_origin_h2_max_streams_response_value": {
+      "cache_settings_origin_h2_max_streams_response_value_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": 204
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/origin_h2_max_streams": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/origin_h2_max_streams": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# BasicZarazZarazConfigFlow
+
+main: kit: flow: BasicZarazZarazConfigFlow:
+{
+  entity: "zaraz_zaraz_config",
+  kind: "basic",
+  name: "BasicZarazZarazConfigFlow",
+  step: [
+    {
+      i: {
+        ref: "zaraz_zaraz_config_ref01",
+        srcdatavar: "zaraz_zaraz_config_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-zaraz_zaraz_config_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicZarazZarazConfigFlow"
+}

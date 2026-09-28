@@ -1,0 +1,4704 @@
+{
+  "def": "cf-zone-settings-openapi.json",
+  "main": {
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "cache_settings_origin_h2_max_streams_response_value": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "sh": "Origin H2 Max Streams configures the max number of concurrent requests that Cloudflare will send within the same connection when communicating with the origin server, if the origin supports it.",
+              "t": "`$OBJECT`"
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            },
+            "value": {
+              "a": true,
+              "h": "Value",
+              "n": "value",
+              "r": true,
+              "sh": "Value of the Origin H2 Max Streams Setting.",
+              "t": "`$INTEGER`"
+            }
+          },
+          "name": "cache_settings_origin_h2_max_streams_response_value",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/origin_h2_max_streams",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/origin_h2_max_streams",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "origin_h2_max_streams"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/origin_h2_max_streams",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/origin_h2_max_streams",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "origin_h2_max_streams"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "config": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 7,
+                "count": 7,
+                "depth": 14
+              }
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "config",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/zaraz/config",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/zaraz/config",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "config"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "csam_config_service_csam_scanner_single": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "sh": "The feature identifier.",
+              "t": "`$STRING`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "sh": "CSAM Scanner configuration for a zone.",
+              "t": "`$OBJECT`"
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            },
+            "value": {
+              "a": true,
+              "h": "Value",
+              "n": "value",
+              "r": false,
+              "sh": "Writable CSAM Scanner feature configuration values.",
+              "t": "`$OBJECT`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "csam_config_service_csam_scanner_single",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/csam_scanner_third_party",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/csam_scanner_third_party",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "csam_scanner_third_party"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/csam_scanner_third_party",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/csam_scanner_third_party",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "csam_scanner_third_party"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "default": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 7,
+                "count": 7,
+                "depth": 14
+              }
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "default",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/zaraz/default",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/zaraz/default",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "default"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "google_tag_gateway": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "google_tag_gateway",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/google-tag-gateway/config",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/google-tag-gateway/config",
+                  "q": {
+                    "$action": "config",
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "google-tag-gateway"
+                    },
+                    {
+                      "lit": "config"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /zones/{zone_id}/settings/google-tag-gateway/config",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/zones/{zone_id}/settings/google-tag-gateway/config",
+                  "q": {
+                    "$action": "config",
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "google-tag-gateway"
+                    },
+                    {
+                      "lit": "config"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "nel": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": true,
+              "sh": "A zone-scoped NEL configuration setting.",
+              "t": "`$OBJECT`"
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            },
+            "value": {
+              "a": true,
+              "h": "Value",
+              "n": "value",
+              "r": true,
+              "sh": "The NEL configuration value.",
+              "t": "`$OBJECT`"
+            }
+          },
+          "name": "nel",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/nel",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/nel",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "nel"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/nel",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/nel",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "nel"
+                    }
+                  ],
+                  "t": {
+                    "req": {
+                      "value": "`reqdata.value`"
+                    },
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "rum": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            },
+            "value": {
+              "a": true,
+              "h": "Value",
+              "n": "value",
+              "r": false,
+              "sh": "Value can either be On or Off.",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "rum",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/rum",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/rum",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "rum"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/rum",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/rum",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "rum"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zaraz": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "zaraz",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /zones/{zone_id}/settings/zaraz/publish",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/zones/{zone_id}/settings/zaraz/publish",
+                  "q": {
+                    "$action": "publish",
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "publish"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zaraz_zaraz_config": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "zaraz_zaraz_config",
+          "op": {
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /zones/{zone_id}/settings/zaraz/config",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/zones/{zone_id}/settings/zaraz/config",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "config"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /zones/{zone_id}/settings/zaraz/history",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/zones/{zone_id}/settings/zaraz/history",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "history"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zaraz_zaraz_config_history": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "sh": "Object where keys are numeric configuration IDs.",
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 7,
+                "count": 7,
+                "depth": 19
+              }
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "zaraz_zaraz_config_history",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/zaraz/history/configs",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": [
+                          12345,
+                          23456
+                        ],
+                        "k": "query",
+                        "n": "ids",
+                        "or": "ids",
+                        "r": true,
+                        "t": "`$ARRAY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/zaraz/history/configs",
+                  "q": {
+                    "exist": [
+                      "ids",
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "history"
+                    },
+                    {
+                      "lit": "configs"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zaraz_zaraz_config_return": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "analytics": {
+              "a": true,
+              "h": "Analytics",
+              "n": "analytics",
+              "r": false,
+              "sh": "Cloudflare Monitoring settings.",
+              "t": "`$OBJECT`"
+            },
+            "consent": {
+              "a": true,
+              "h": "Consent",
+              "n": "consent",
+              "r": true,
+              "sh": "Consent management configuration.",
+              "t": "`$OBJECT`"
+            },
+            "dataLayer": {
+              "a": true,
+              "h": "Data Layer",
+              "n": "dataLayer",
+              "r": true,
+              "sh": "Data layer compatibility mode enabled.",
+              "t": "`$BOOLEAN`"
+            },
+            "debugKey": {
+              "a": true,
+              "h": "Debug Key",
+              "n": "debugKey",
+              "r": true,
+              "sh": "The key for Zaraz debug mode.",
+              "t": "`$STRING`"
+            },
+            "historyChange": {
+              "a": true,
+              "h": "History Change",
+              "n": "historyChange",
+              "r": false,
+              "sh": "Single Page Application support enabled.",
+              "t": "`$BOOLEAN`"
+            },
+            "settings": {
+              "a": true,
+              "h": "Settings",
+              "n": "settings",
+              "r": true,
+              "sh": "General Zaraz settings.",
+              "t": "`$OBJECT`"
+            },
+            "tools": {
+              "a": true,
+              "h": "Tools",
+              "n": "tools",
+              "r": false,
+              "sh": "Tools set up under Zaraz configuration, where key is the alpha-numeric tool ID and value is the tool configuration object.",
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 5,
+                "depth": 10
+              }
+            },
+            "triggers": {
+              "a": true,
+              "h": "Triggers",
+              "n": "triggers",
+              "r": true,
+              "sh": "Triggers set up under Zaraz configuration, where key is the trigger alpha-numeric ID and value is the trigger configuration.",
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 7,
+                "count": 2,
+                "depth": 4
+              }
+            },
+            "variables": {
+              "a": true,
+              "h": "Variables",
+              "n": "variables",
+              "r": true,
+              "sh": "Variables set up under Zaraz configuration, where key is the variable alpha-numeric ID and value is the variable configuration.",
+              "t": "`$OBJECT`"
+            },
+            "zarazVersion": {
+              "a": true,
+              "h": "Zaraz Version",
+              "n": "zarazVersion",
+              "r": true,
+              "sh": "Zaraz internal version of the config.",
+              "t": "`$INTEGER`"
+            }
+          },
+          "name": "zaraz_zaraz_config_return",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/zaraz/export",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/zaraz/export",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "export"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zaraz_zaraz_history": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "zaraz_zaraz_history",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/zaraz/history",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 10,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "updated_at",
+                        "k": "query",
+                        "n": "sort_field",
+                        "or": "sort_field",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "DESC",
+                        "k": "query",
+                        "n": "sort_order",
+                        "or": "sort_order",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/zaraz/history",
+                  "q": {
+                    "exist": [
+                      "limit",
+                      "offset",
+                      "sort_field",
+                      "sort_order",
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "history"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zaraz_zaraz_workflow": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "sh": "Zaraz workflow.",
+              "t": "`$STRING`"
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful.",
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "zaraz_zaraz_workflow",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/zaraz/workflow",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/zaraz/workflow",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "workflow"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /zones/{zone_id}/settings/zaraz/workflow",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/zones/{zone_id}/settings/zaraz/workflow",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "zaraz"
+                    },
+                    {
+                      "lit": "workflow"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zone_setting": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "sh": "Aegis provides dedicated egress IPs (from Cloudflare to your origin) for your layer 7 WAF and CDN services.",
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 66,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful",
+              "t": "`$BOOLEAN`"
+            },
+            "value": {
+              "a": true,
+              "h": "Value",
+              "n": "value",
+              "r": true,
+              "sh": "Value of the zone setting.",
+              "t": "`$OBJECT`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "zone_setting",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/automatic_platform_optimization",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/automatic_platform_optimization",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "automatic_platform_optimization"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/binary_ast",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/binary_ast",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "binary_ast"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/fonts",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/fonts",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "fonts"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/h2_prioritization",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/h2_prioritization",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "h2_prioritization"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/image_resizing",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/image_resizing",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "image_resizing"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/speed_brain",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/speed_brain",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "speed_brain"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/transformations_allowed_origins",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/transformations_allowed_origins",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "transformations_allowed_origins"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/transformations_c2pa",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/transformations_c2pa",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "transformations_c2pa"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/transformations_config",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/transformations_config",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "transformations_config"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/{setting_id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "always_online",
+                        "k": "param",
+                        "n": "id",
+                        "or": "setting_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/{setting_id}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "zone_id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "setting_id": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/aegis",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/aegis",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "aegis"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings/origin_max_http_version",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings/origin_max_http_version",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "origin_max_http_version"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/{setting_id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "always_online",
+                        "k": "param",
+                        "n": "id",
+                        "or": "setting_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/{setting_id}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "zone_id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "setting_id": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/aegis",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/aegis",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "aegis"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/automatic_platform_optimization",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/automatic_platform_optimization",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "automatic_platform_optimization"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/binary_ast",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/binary_ast",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "binary_ast"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/fonts",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/fonts",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "fonts"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/h2_prioritization",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/h2_prioritization",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "h2_prioritization"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/image_resizing",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/image_resizing",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "image_resizing"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/origin_max_http_version",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/origin_max_http_version",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "origin_max_http_version"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/speed_brain",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/speed_brain",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "speed_brain"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/transformations_allowed_origins",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/transformations_allowed_origins",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "transformations_allowed_origins"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/transformations_c2pa",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/transformations_c2pa",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "transformations_c2pa"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings/transformations_config",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings/transformations_config",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    },
+                    {
+                      "lit": "transformations_config"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "zones_zone_settings_response_collection": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "errors": {
+              "a": true,
+              "h": "Errors",
+              "n": "errors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 65,
+                "count": 1,
+                "depth": 1
+              }
+            },
+            "success": {
+              "a": true,
+              "h": "Success",
+              "n": "success",
+              "r": true,
+              "sh": "Whether the API call was successful",
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "zones_zone_settings_response_collection",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/settings",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/settings",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/settings",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/settings",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "settings"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow": {
+          "active": true,
+          "entity": "cache_settings_origin_h2_max_streams_response_value",
+          "key$": "BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow",
+          "kind": "basic",
+          "name": "BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "cache_settings_origin_h2_max_streams_response_value_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "cache_settings_origin_h2_max_streams_response_value_ref01",
+                "srcdatavar": "cache_settings_origin_h2_max_streams_response_value_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-cache_settings_origin_h2_max_streams_response_value_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicConfigFlow": {
+          "active": true,
+          "entity": "config",
+          "key$": "BasicConfigFlow",
+          "kind": "basic",
+          "name": "BasicConfigFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "config_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicCsamConfigServiceCsamScannerSingleFlow": {
+          "active": true,
+          "entity": "csam_config_service_csam_scanner_single",
+          "key$": "BasicCsamConfigServiceCsamScannerSingleFlow",
+          "kind": "basic",
+          "name": "BasicCsamConfigServiceCsamScannerSingleFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "csam_config_service_csam_scanner_single_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "csam_config_service_csam_scanner_single_ref01",
+                "srcdatavar": "csam_config_service_csam_scanner_single_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-csam_config_service_csam_scanner_single_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicDefaultFlow": {
+          "active": true,
+          "entity": "default",
+          "key$": "BasicDefaultFlow",
+          "kind": "basic",
+          "name": "BasicDefaultFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "default_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicGoogleTagGatewayFlow": {
+          "active": true,
+          "entity": "google_tag_gateway",
+          "key$": "BasicGoogleTagGatewayFlow",
+          "kind": "basic",
+          "name": "BasicGoogleTagGatewayFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "google_tag_gateway_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "google_tag_gateway_ref01",
+                "srcdatavar": "google_tag_gateway_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-google_tag_gateway_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicNelFlow": {
+          "active": true,
+          "entity": "nel",
+          "key$": "BasicNelFlow",
+          "kind": "basic",
+          "name": "BasicNelFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "nel_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "nel_ref01",
+                "srcdatavar": "nel_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-nel_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicRumFlow": {
+          "active": true,
+          "entity": "rum",
+          "key$": "BasicRumFlow",
+          "kind": "basic",
+          "name": "BasicRumFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "rum_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "rum_ref01",
+                "srcdatavar": "rum_ref01_data",
+                "suffix": "_up0",
+                "textfield": "value"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-rum_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicZarazFlow": {
+          "active": true,
+          "entity": "zaraz",
+          "key$": "BasicZarazFlow",
+          "kind": "basic",
+          "name": "BasicZarazFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zaraz_ref01"
+              },
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicZarazZarazConfigFlow": {
+          "active": true,
+          "entity": "zaraz_zaraz_config",
+          "key$": "BasicZarazZarazConfigFlow",
+          "kind": "basic",
+          "name": "BasicZarazZarazConfigFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zaraz_zaraz_config_ref01",
+                "srcdatavar": "zaraz_zaraz_config_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-zaraz_zaraz_config_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicZarazZarazConfigHistoryFlow": {
+          "active": true,
+          "entity": "zaraz_zaraz_config_history",
+          "key$": "BasicZarazZarazConfigHistoryFlow",
+          "kind": "basic",
+          "name": "BasicZarazZarazConfigHistoryFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "zaraz_zaraz_config_history_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicZarazZarazConfigReturnFlow": {
+          "active": true,
+          "entity": "zaraz_zaraz_config_return",
+          "key$": "BasicZarazZarazConfigReturnFlow",
+          "kind": "basic",
+          "name": "BasicZarazZarazConfigReturnFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zaraz_zaraz_config_return_ref01",
+                "srcdatavar": "zaraz_zaraz_config_return_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "zaraz_zaraz_config_return01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-zaraz_zaraz_config_return_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicZarazZarazHistoryFlow": {
+          "active": true,
+          "entity": "zaraz_zaraz_history",
+          "key$": "BasicZarazZarazHistoryFlow",
+          "kind": "basic",
+          "name": "BasicZarazZarazHistoryFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "zaraz_zaraz_history_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicZarazZarazWorkflowFlow": {
+          "active": true,
+          "entity": "zaraz_zaraz_workflow",
+          "key$": "BasicZarazZarazWorkflowFlow",
+          "kind": "basic",
+          "name": "BasicZarazZarazWorkflowFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "zaraz_zaraz_workflow_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zaraz_zaraz_workflow_ref01",
+                "srcdatavar": "zaraz_zaraz_workflow_ref01_data",
+                "suffix": "_up0",
+                "textfield": "result"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-zaraz_zaraz_workflow_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicZoneSettingFlow": {
+          "active": true,
+          "entity": "zone_setting",
+          "key$": "BasicZoneSettingFlow",
+          "kind": "basic",
+          "name": "BasicZoneSettingFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "zone_setting_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zone_setting_ref01",
+                "srcdatavar": "zone_setting_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-zone_setting_ref01"
+                  }
+                }
+              ],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zone_setting_ref01",
+                "srcdatavar": "zone_setting_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "zone_setting01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-zone_setting_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicZonesZoneSettingsResponseCollectionFlow": {
+          "active": true,
+          "entity": "zones_zone_settings_response_collection",
+          "key$": "BasicZonesZoneSettingsResponseCollectionFlow",
+          "kind": "basic",
+          "name": "BasicZonesZoneSettingsResponseCollectionFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "zone_id": "zone01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "zones_zone_settings_response_collection_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "zones_zone_settings_response_collection_ref01",
+                "srcdatavar": "zones_zone_settings_response_collection_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-zones_zone_settings_response_collection_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        }
+      },
+      "info": {
+        "description": "Cloudflare zone settings: performance, transformations, Zaraz, image resizing, fonts, protocol behavior, and general setting values.",
+        "license": {
+          "name": "BSD-3-Clause",
+          "url": "https://opensource.org/licenses/BSD-3-Clause"
+        },
+        "security": {
+          "in": "header",
+          "name": "X-Auth-Email",
+          "prefix": "",
+          "scheme": "api_email",
+          "type": "apiKey"
+        },
+        "servers": [
+          {
+            "description": "Client API",
+            "url": "https://api.cloudflare.com/client/v4"
+          }
+        ],
+        "summary": "Cloudflare zone settings: performance, transformations, Zaraz, image resizing, fonts, protocol behavior, and general setting values.",
+        "title": "Cloudflare Zone Settings",
+        "version": "4.0.0",
+        "website": "https://cloudflare.com"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "keys": "key,token,id"
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "go": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "go",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
+          "title": "Golang"
+        },
+        "go-cli": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-cli",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go CLI"
+        },
+        "go-mcp": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-mcp",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go MCP server"
+        },
+        "lua": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "--"
+          },
+          "deps": {
+            "dkjson": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.5"
+            }
+          },
+          "ext": "lua",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "lua",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "luarocks",
+              "package": "",
+              "state": "pending",
+              "url": "https://luarocks.org",
+              "vault": {
+                "alias": "luarocks",
+                "env": "LUAROCKS_API_KEY",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.lua"
+          ],
+          "title": "Lua"
+        },
+        "php": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "php",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "php",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "packagist",
+              "package": "",
+              "state": "pending",
+              "url": "https://packagist.org",
+              "vault": {
+                "alias": "packagist",
+                "env": "PACKAGIST_API_TOKEN",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/StructRunner.php"
+          ],
+          "title": "PHP"
+        },
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "rb": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "json": {
+              "active": true,
+              "kind": "prod",
+              "version": "*"
+            }
+          },
+          "ext": "rb",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "rb",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "rubygems",
+              "package": "",
+              "state": "pending",
+              "url": "https://rubygems.org",
+              "vault": {
+                "alias": "gem",
+                "env": "",
+                "recipe": "gem"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.rb"
+          ],
+          "title": "Ruby"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "Cloudflare-zone-settings",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      }
+    }
+  },
+  "name": "Cloudflare-zone-settings",
+  "origin": "voxgig-sdk"
+}

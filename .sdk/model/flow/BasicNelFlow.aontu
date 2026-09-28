@@ -1,0 +1,44 @@
+# BasicNelFlow
+
+main: kit: flow: BasicNelFlow:
+{
+  entity: "nel",
+  kind: "basic",
+  name: "BasicNelFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "nel_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "nel_ref01",
+        srcdatavar: "nel_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-nel_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicNelFlow"
+}

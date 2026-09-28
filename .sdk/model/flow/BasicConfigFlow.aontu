@@ -1,0 +1,26 @@
+# BasicConfigFlow
+
+main: kit: flow: BasicConfigFlow:
+{
+  entity: "config",
+  kind: "basic",
+  name: "BasicConfigFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "config_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicConfigFlow"
+}

@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "google_tag_gateway": {
+      "GOOGLE_TAG_GATEWAY00": {
+        "zone_id": "ZONE01",
+        "id": "GOOGLE_TAG_GATEWAY00"
+      },
+      "GOOGLE_TAG_GATEWAY01": {
+        "zone_id": "ZONE01",
+        "id": "GOOGLE_TAG_GATEWAY01"
+      },
+      "GOOGLE_TAG_GATEWAY02": {
+        "zone_id": "ZONE01",
+        "id": "GOOGLE_TAG_GATEWAY02"
+      }
+    }
+  },
+  "new": {
+    "google_tag_gateway": {
+      "google_tag_gateway_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/google-tag-gateway/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/settings/google-tag-gateway/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

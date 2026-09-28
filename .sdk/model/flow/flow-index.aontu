@@ -1,0 +1,17 @@
+# Flows
+
+@"./BasicCacheSettingsOriginH2MaxStreamsResponseValueFlow.aontu"
+@"./BasicConfigFlow.aontu"
+@"./BasicCsamConfigServiceCsamScannerSingleFlow.aontu"
+@"./BasicDefaultFlow.aontu"
+@"./BasicGoogleTagGatewayFlow.aontu"
+@"./BasicNelFlow.aontu"
+@"./BasicRumFlow.aontu"
+@"./BasicZarazFlow.aontu"
+@"./BasicZarazZarazConfigFlow.aontu"
+@"./BasicZarazZarazConfigHistoryFlow.aontu"
+@"./BasicZarazZarazConfigReturnFlow.aontu"
+@"./BasicZarazZarazHistoryFlow.aontu"
+@"./BasicZarazZarazWorkflowFlow.aontu"
+@"./BasicZoneSettingFlow.aontu"
+@"./BasicZonesZoneSettingsResponseCollectionFlow.aontu"

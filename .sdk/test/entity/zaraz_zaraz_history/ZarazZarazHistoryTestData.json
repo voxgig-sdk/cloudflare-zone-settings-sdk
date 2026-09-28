@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "zaraz_zaraz_history": {
+      "ZARAZ_ZARAZ_HISTORY00": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "ZARAZ_ZARAZ_HISTORY01": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "ZARAZ_ZARAZ_HISTORY02": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "success": false,
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "zaraz_zaraz_history": {
+      "zaraz_zaraz_history_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/zaraz/history": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

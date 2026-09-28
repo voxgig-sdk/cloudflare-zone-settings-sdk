@@ -1,0 +1,32 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: "Cloudflare zone settings: performance, transformations, Zaraz, image resizing, fonts, protocol behavior, and general setting values."
+      license: {
+        name: "BSD-3-Clause"
+        url: "https://opensource.org/licenses/BSD-3-Clause"
+      }
+      security: {
+        in: "header"
+        name: "X-Auth-Email"
+        prefix: ""
+        scheme: "api_email"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          description: "Client API"
+          url: "https://api.cloudflare.com/client/v4"
+        }
+      ]
+      summary: "Cloudflare zone settings: performance, transformations, Zaraz, image resizing, fonts, protocol behavior, and general setting values."
+      title: "Cloudflare Zone Settings"
+      version: "4.0.0"
+      website: "https://cloudflare.com"
+    }
+  }
+}
+

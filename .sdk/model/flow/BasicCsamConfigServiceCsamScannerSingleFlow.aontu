@@ -1,0 +1,44 @@
+# BasicCsamConfigServiceCsamScannerSingleFlow
+
+main: kit: flow: BasicCsamConfigServiceCsamScannerSingleFlow:
+{
+  entity: "csam_config_service_csam_scanner_single",
+  kind: "basic",
+  name: "BasicCsamConfigServiceCsamScannerSingleFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "csam_config_service_csam_scanner_single_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "csam_config_service_csam_scanner_single_ref01",
+        srcdatavar: "csam_config_service_csam_scanner_single_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-csam_config_service_csam_scanner_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCsamConfigServiceCsamScannerSingleFlow"
+}

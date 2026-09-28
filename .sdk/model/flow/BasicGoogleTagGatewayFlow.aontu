@@ -1,0 +1,44 @@
+# BasicGoogleTagGatewayFlow
+
+main: kit: flow: BasicGoogleTagGatewayFlow:
+{
+  entity: "google_tag_gateway",
+  kind: "basic",
+  name: "BasicGoogleTagGatewayFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "google_tag_gateway_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "google_tag_gateway_ref01",
+        srcdatavar: "google_tag_gateway_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-google_tag_gateway_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGoogleTagGatewayFlow"
+}

@@ -1,0 +1,1752 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ZoneSetting | Cloudflare Zone Settings</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#content">Skip to content</a>
+<header class="site-header"><a class="site-title" href="../index.html">Cloudflare Zone Settings<span>SDK documentation</span></a><div class="site-links"><a class="repo-link" href="https://github.com/voxgig-sdk/cloudflare-zone-settings-sdk">voxgig-sdk/cloudflare-zone-settings-sdk</a></div></header>
+<div class="site-notice" role="note"></div>
+<div class="shell"><nav class="site-nav" aria-label="Documentation"><div class="search"><label for="search">Search documentation</label><input id="search" type="search" data-base="../" placeholder="Find a guide or reference"><div id="results" aria-live="polite"></div></div><details><summary>Overview</summary><a href="../index.html">Cloudflare Zone Settings</a></details>
+<details open><summary>API</summary><a href="../api/index.html">API overview</a>
+<a href="../api/cache_settings_origin_h2_max_streams_response_value.html">CacheSettingsOriginH2MaxStreamsResponseValue</a>
+<a href="../api/config.html">Config</a>
+<a href="../api/csam_config_service_csam_scanner_single.html">CsamConfigServiceCsamScannerSingle</a>
+<a href="../api/default.html">Default</a>
+<a href="../api/google_tag_gateway.html">GoogleTagGateway</a>
+<a href="../api/nel.html">Nel</a>
+<a href="../api/rum.html">Rum</a>
+<a href="../api/zaraz.html">Zaraz</a>
+<a href="../api/zaraz_zaraz_config.html">ZarazZarazConfig</a>
+<a href="../api/zaraz_zaraz_config_history.html">ZarazZarazConfigHistory</a>
+<a href="../api/zaraz_zaraz_config_return.html">ZarazZarazConfigReturn</a>
+<a href="../api/zaraz_zaraz_history.html">ZarazZarazHistory</a>
+<a href="../api/zaraz_zaraz_workflow.html">ZarazZarazWorkflow</a>
+<a aria-current="page" href="../api/zone_setting.html">ZoneSetting</a><div class="nav-sections"><a class="nav-section" href="#get-zoneszone_idsettingsautomatic_platform_optimization">GET /zones/{zone_id}/settings/automatic_platform_optimization</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsbinary_ast">GET /zones/{zone_id}/settings/binary_ast</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsfonts">GET /zones/{zone_id}/settings/fonts</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsh2_prioritization">GET /zones/{zone_id}/settings/h2_prioritization</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsimage_resizing">GET /zones/{zone_id}/settings/image_resizing</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsspeed_brain">GET /zones/{zone_id}/settings/speed_brain</a>
+<a class="nav-section" href="#get-zoneszone_idsettingstransformations_allowed_origins">GET /zones/{zone_id}/settings/transformations_allowed_origins</a>
+<a class="nav-section" href="#get-zoneszone_idsettingstransformations_c2pa">GET /zones/{zone_id}/settings/transformations_c2pa</a>
+<a class="nav-section" href="#get-zoneszone_idsettingstransformations_config">GET /zones/{zone_id}/settings/transformations_config</a>
+<a class="nav-section" href="#get-zoneszone_idsettingssetting_id">GET /zones/{zone_id}/settings/{setting_id}</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsaegis">GET /zones/{zone_id}/settings/aegis</a>
+<a class="nav-section" href="#get-zoneszone_idsettingsorigin_max_http_version">GET /zones/{zone_id}/settings/origin_max_http_version</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingssetting_id">PATCH /zones/{zone_id}/settings/{setting_id}</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsaegis">PATCH /zones/{zone_id}/settings/aegis</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsautomatic_platform_optimization">PATCH /zones/{zone_id}/settings/automatic_platform_optimization</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsbinary_ast">PATCH /zones/{zone_id}/settings/binary_ast</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsfonts">PATCH /zones/{zone_id}/settings/fonts</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsh2_prioritization">PATCH /zones/{zone_id}/settings/h2_prioritization</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsimage_resizing">PATCH /zones/{zone_id}/settings/image_resizing</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsorigin_max_http_version">PATCH /zones/{zone_id}/settings/origin_max_http_version</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingsspeed_brain">PATCH /zones/{zone_id}/settings/speed_brain</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingstransformations_allowed_origins">PATCH /zones/{zone_id}/settings/transformations_allowed_origins</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingstransformations_c2pa">PATCH /zones/{zone_id}/settings/transformations_c2pa</a>
+<a class="nav-section" href="#patch-zoneszone_idsettingstransformations_config">PATCH /zones/{zone_id}/settings/transformations_config</a></div>
+<a href="../api/zones_zone_settings_response_collection.html">ZonesZoneSettingsResponseCollection</a></details>
+<details><summary>Guides</summary><a href="../guides/authentication.html">Authentication</a>
+<a href="../guides/first-call.html">Make your first API call</a>
+<a href="../guides/errors.html">Handle errors</a>
+<a href="../guides/concepts.html">Entities, SDKs, and tools</a></details>
+<details><summary>SDKs</summary><a href="../sdks/go.html">Golang</a>
+<a href="../sdks/lua.html">Lua</a>
+<a href="../sdks/php.html">PHP</a>
+<a href="../sdks/py.html">Python</a>
+<a href="../sdks/rb.html">Ruby</a>
+<a href="../sdks/ts.html">TypeScript</a></details>
+<details><summary>Tools</summary><a href="../tools/go-cli.html">Go CLI</a>
+<a href="../tools/go-mcp.html">Go MCP server</a></details>
+<details><summary>Features</summary><a href="../features/test.html">Test transport</a></details></nav><main id="content"><div class="page-context"><span class="section-dot" aria-hidden="true"></span>API</div><h1 id="zonesetting">ZoneSetting</h1>
+<h2 id="operations">Operations</h2>
+<p>Every route this entity exposes. Each route links to its own reference on this page.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>SDK operation</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsautomatic_platform_optimization"><code>/zones/{zone_id}/settings/automatic_platform_optimization</code></a></td>
+<td><code>list</code></td>
+<td>Get Automatic Platform Optimization setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsbinary_ast"><code>/zones/{zone_id}/settings/binary_ast</code></a></td>
+<td><code>list</code></td>
+<td>Get Binary AST setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsfonts"><code>/zones/{zone_id}/settings/fonts</code></a></td>
+<td><code>list</code></td>
+<td>Get Cloudflare Fonts setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsh2_prioritization"><code>/zones/{zone_id}/settings/h2_prioritization</code></a></td>
+<td><code>list</code></td>
+<td>Get HTTP/2 Prioritization setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsimage_resizing"><code>/zones/{zone_id}/settings/image_resizing</code></a></td>
+<td><code>list</code></td>
+<td>Get Image Resizing setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsspeed_brain"><code>/zones/{zone_id}/settings/speed_brain</code></a></td>
+<td><code>list</code></td>
+<td>Get Cloudflare Speed Brain setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingstransformations_allowed_origins"><code>/zones/{zone_id}/settings/transformations_allowed_origins</code></a></td>
+<td><code>list</code></td>
+<td>Get Image Transformations Allowed Origins setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingstransformations_c2pa"><code>/zones/{zone_id}/settings/transformations_c2pa</code></a></td>
+<td><code>list</code></td>
+<td>Get Image Transformations C2PA setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingstransformations_config"><code>/zones/{zone_id}/settings/transformations_config</code></a></td>
+<td><code>list</code></td>
+<td>Get Transformations configuration response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingssetting_id"><code>/zones/{zone_id}/settings/{setting_id}</code></a></td>
+<td><code>load</code></td>
+<td>Get zone setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsaegis"><code>/zones/{zone_id}/settings/aegis</code></a></td>
+<td><code>load</code></td>
+<td>Get aegis setting response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsettingsorigin_max_http_version"><code>/zones/{zone_id}/settings/origin_max_http_version</code></a></td>
+<td><code>load</code></td>
+<td>Get Origin Max HTTP Version setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingssetting_id"><code>/zones/{zone_id}/settings/{setting_id}</code></a></td>
+<td><code>update</code></td>
+<td>Edit zone setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsaegis"><code>/zones/{zone_id}/settings/aegis</code></a></td>
+<td><code>update</code></td>
+<td>Change aegis setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsautomatic_platform_optimization"><code>/zones/{zone_id}/settings/automatic_platform_optimization</code></a></td>
+<td><code>update</code></td>
+<td>Change Automatic Platform Optimization setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsbinary_ast"><code>/zones/{zone_id}/settings/binary_ast</code></a></td>
+<td><code>update</code></td>
+<td>Change Binary AST setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsfonts"><code>/zones/{zone_id}/settings/fonts</code></a></td>
+<td><code>update</code></td>
+<td>Change Cloudflare Fonts setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsh2_prioritization"><code>/zones/{zone_id}/settings/h2_prioritization</code></a></td>
+<td><code>update</code></td>
+<td>Change HTTP/2 Prioritization setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsimage_resizing"><code>/zones/{zone_id}/settings/image_resizing</code></a></td>
+<td><code>update</code></td>
+<td>Change Image Resizing setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsorigin_max_http_version"><code>/zones/{zone_id}/settings/origin_max_http_version</code></a></td>
+<td><code>update</code></td>
+<td>Change Origin Max HTTP Version setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingsspeed_brain"><code>/zones/{zone_id}/settings/speed_brain</code></a></td>
+<td><code>update</code></td>
+<td>Cloudflare Speed Brain setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingstransformations_allowed_origins"><code>/zones/{zone_id}/settings/transformations_allowed_origins</code></a></td>
+<td><code>update</code></td>
+<td>Change Image Transformations Allowed Origins setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingstransformations_c2pa"><code>/zones/{zone_id}/settings/transformations_c2pa</code></a></td>
+<td><code>update</code></td>
+<td>Change Image Transformations C2PA setting response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsettingstransformations_config"><code>/zones/{zone_id}/settings/transformations_config</code></a></td>
+<td><code>update</code></td>
+<td>Change Transformations configuration response</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>One example per SDK, generated from the API model. The argument names are the parameters and fields of this entity, and the values are placeholders. The examples are not compiled or executed.</p>
+<h3 id="golang">Golang</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/go.html#set-up-the-client">Golang setup</a>, then call the operations:</p>
+<pre><code class="language-go">zone_settings, err := client.ZoneSetting(nil).List(map[string]any{&quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(zone_settings)
+zone_setting, err := client.ZoneSetting(nil).Load(map[string]any{&quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(zone_setting)
+updated, err := client.ZoneSetting(nil).Update(map[string]any{&quot;id&quot;: &quot;example_id&quot;, &quot;zone_id&quot;: &quot;example&quot;, &quot;errors&quot;: []any{}}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(updated)
+</code></pre>
+<h3 id="lua">Lua</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/lua.html#set-up-the-client">Lua setup</a>, then call the operations:</p>
+<pre><code class="language-lua">local zone_settings, err = client:ZoneSetting():list({ zone_id = &quot;example&quot; })
+local zone_setting, err = client:ZoneSetting():load({ zone_id = &quot;example&quot; })
+local updated, err = client:ZoneSetting():update({ id = &quot;example_id&quot;, zone_id = &quot;example&quot;, errors = {} })
+</code></pre>
+<h3 id="php">PHP</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/php.html#set-up-the-client">PHP setup</a>, then call the operations:</p>
+<pre><code class="language-php">$zone_settings = $client-&gt;ZoneSetting()-&gt;list([&quot;zone_id&quot; =&gt; &quot;example&quot;]);
+$zone_setting = $client-&gt;ZoneSetting()-&gt;load([&quot;zone_id&quot; =&gt; &quot;example&quot;]);
+$updated = $client-&gt;ZoneSetting()-&gt;update([&quot;id&quot; =&gt; &quot;example_id&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;errors&quot; =&gt; []]);
+</code></pre>
+<h3 id="python">Python</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/py.html#set-up-the-client">Python setup</a>, then call the operations:</p>
+<pre><code class="language-py">zone_settings = client.ZoneSetting().list({&quot;zone_id&quot;: &quot;example&quot;})
+zone_setting = client.ZoneSetting().load({&quot;zone_id&quot;: &quot;example&quot;})
+updated = client.ZoneSetting().update({&quot;id&quot;: &quot;example_id&quot;, &quot;zone_id&quot;: &quot;example&quot;, &quot;errors&quot;: []})
+</code></pre>
+<h3 id="ruby">Ruby</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/rb.html#set-up-the-client">Ruby setup</a>, then call the operations:</p>
+<pre><code class="language-rb">zone_settings = client.ZoneSetting.list({ &quot;zone_id&quot; =&gt; &quot;example&quot; })
+zone_setting = client.ZoneSetting.load({ &quot;zone_id&quot; =&gt; &quot;example&quot; })
+updated = client.ZoneSetting.update({ &quot;id&quot; =&gt; &quot;example_id&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;errors&quot; =&gt; [] })
+</code></pre>
+<h3 id="typescript">TypeScript</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/ts.html#set-up-the-client">TypeScript setup</a>, then call the operations:</p>
+<pre><code class="language-ts">const zone_settings = await client.ZoneSetting().list({ zone_id: &quot;example&quot; })
+const zone_setting = await client.ZoneSetting().load({ zone_id: &quot;example&quot; })
+const updated = await client.ZoneSetting().update({ id: &quot;example_id&quot;, zone_id: &quot;example&quot;, errors: [] })
+</code></pre>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array</code></td>
+<td>Yes</td>
+<td>Errors</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>Id</td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array</code></td>
+<td>Yes</td>
+<td>Messages</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Aegis provides dedicated egress IPs (from Cloudflare to your origin) for your layer 7 WAF and CDN services.</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td>Value of the zone setting.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="list">list</h2>
+<h3 id="get-zoneszone_idsettingsautomatic_platform_optimization" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/automatic_platform_optimization</h3>
+<p>Operation ID: <code>zone-settings-get-automatic-platform-optimization-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses">Responses</h4>
+<h5 id="200-get-automatic-platform-optimization-setting-response" class="status" data-status="2xx">200: Get Automatic Platform Optimization setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-automatic-platform-optimization-setting-response-failure">4XX: Get Automatic Platform Optimization setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsbinary_ast" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/binary_ast</h3>
+<p>Operation ID: <code>zone-settings-get-binary-ast-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-1">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-1">Responses</h4>
+<h5 id="200-get-binary-ast-setting-response" class="status" data-status="2xx">200: Get Binary AST setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-binary-ast-setting-response-failure">4XX: Get Binary AST setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsfonts" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/fonts</h3>
+<p>Operation ID: <code>zone-settings-get-fonts-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-2">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-2">Responses</h4>
+<h5 id="200-get-cloudflare-fonts-setting-response" class="status" data-status="2xx">200: Get Cloudflare Fonts setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-cloudflare-fonts-setting-response-failure">4XX: Get Cloudflare Fonts setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsh2_prioritization" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/h2_prioritization</h3>
+<p>Operation ID: <code>zone-settings-get-h2-prioritization-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-3">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-3">Responses</h4>
+<h5 id="200-get-http2-prioritization-setting-response" class="status" data-status="2xx">200: Get HTTP/2 Prioritization setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-http2-prioritization-setting-response-failure">4XX: Get HTTP/2 Prioritization setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsimage_resizing" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/image_resizing</h3>
+<p>Operation ID: <code>zone-settings-get-image-resizing-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-4">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-4">Responses</h4>
+<h5 id="200-get-image-resizing-setting-response" class="status" data-status="2xx">200: Get Image Resizing setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-image-resizing-setting-response-failure">4XX: Get Image Resizing setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsspeed_brain" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/speed_brain</h3>
+<p>Operation ID: <code>zone-settings-get-speed-brain-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-5">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-5">Responses</h4>
+<h5 id="200-get-cloudflare-speed-brain-setting-response" class="status" data-status="2xx">200: Get Cloudflare Speed Brain setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-cloudflare-speed-brain-setting-response-failure">4XX: Get Cloudflare Speed Brain setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingstransformations_allowed_origins" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/transformations_allowed_origins</h3>
+<p>Operation ID: <code>zone-settings-get-transformations-allowed-origins-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-6">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-6">Responses</h4>
+<h5 id="200-get-image-transformations-allowed-origins-setting-response" class="status" data-status="2xx">200: Get Image Transformations Allowed Origins setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-image-transformations-allowed-origins-setting-response-failure">4XX: Get Image Transformations Allowed Origins setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingstransformations_c2pa" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/transformations_c2pa</h3>
+<p>Operation ID: <code>zone-settings-get-transformations-c2pa-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-7">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-7">Responses</h4>
+<h5 id="200-get-image-transformations-c2pa-setting-response" class="status" data-status="2xx">200: Get Image Transformations C2PA setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-image-transformations-c2pa-setting-response-failure">4XX: Get Image Transformations C2PA setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingstransformations_config" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/transformations_config</h3>
+<p>Operation ID: <code>zone-settings-get-transformations-config</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-8">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-8">Responses</h4>
+<h5 id="200-get-transformations-configuration-response" class="status" data-status="2xx">200: Get Transformations configuration response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-transformations-configuration-response-failure">4XX: Get Transformations configuration response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="load">load</h2>
+<h3 id="get-zoneszone_idsettingssetting_id" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/{setting_id}</h3>
+<p>Operation ID: <code>zone-settings-get-single-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-9">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>setting_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-9">Responses</h4>
+<h5 id="200-get-zone-setting-response" class="status" data-status="2xx">200: Get zone setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-zone-setting-response-failure">4XX: Get zone setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsaegis" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/aegis</h3>
+<p>Operation ID: <code>zone-cache-settings-get-aegis-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-10">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-10">Responses</h4>
+<h5 id="200-get-aegis-setting-response" class="status" data-status="2xx">200: Get aegis setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-get-aegis-setting-response-failure">4XX: Get aegis setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idsettingsorigin_max_http_version" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/settings/origin_max_http_version</h3>
+<p>Operation ID: <code>zone-cache-settings-get-origin-max-http-version-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-11">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-11">Responses</h4>
+<h5 id="200-get-origin-max-http-version-setting-response" class="status" data-status="2xx">200: Get Origin Max HTTP Version setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-get-origin-max-http-version-setting-response-failure">4XX: Get Origin Max HTTP Version setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="update">update</h2>
+<h3 id="patch-zoneszone_idsettingssetting_id" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/{setting_id}</h3>
+<p>Operation ID: <code>zone-settings-edit-single-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-12">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>setting_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body">Request body</h4>
+<p><code>application/json</code></p>
+<p>The request body is <code>object or object</code>.</p>
+<h4 id="responses-12">Responses</h4>
+<h5 id="200-edit-zone-setting-response" class="status" data-status="2xx">200: Edit zone setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-edit-zone-settings-info-response-failure">4XX: Edit zone settings info response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsaegis" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/aegis</h3>
+<p>Operation ID: <code>zone-cache-settings-change-aegis-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-13">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-1">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td>Value of the zone setting.</td>
+</tr>
+<tr>
+<td><code>value.enabled</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Whether the feature is enabled or not.</td>
+</tr>
+<tr>
+<td><code>value.pool_id</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>Egress pool id which refers to a grouping of dedicated egress IPs through which Cloudflare will connect to origin.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-13">Responses</h4>
+<h5 id="200-change-aegis-setting-response" class="status" data-status="2xx">200: Change aegis setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-change-aegis-setting-response-failure">4XX: Change aegis setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsautomatic_platform_optimization" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/automatic_platform_optimization</h3>
+<p>Operation ID: <code>zone-settings-change-automatic-platform-optimization-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-14">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-2">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: off or object</code></td>
+<td>Yes</td>
+<td>Configuration for Automatic Platform Optimization (APO) for WordPress. Set to &quot;off&quot; to disable, or provide an object to configure APO settings.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-14">Responses</h4>
+<h5 id="200-change-automatic-platform-optimization-setting-response" class="status" data-status="2xx">200: Change Automatic Platform Optimization setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-automatic-platform-optimization-setting-response-failure">4XX: Change Automatic Platform Optimization setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsbinary_ast" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/binary_ast</h3>
+<p>Operation ID: <code>zone-settings-change-binary-ast-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-15">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-3">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: off, on, latest</code></td>
+<td>Yes</td>
+<td>Controls Binary AST behavior: - &quot;off&quot;: Feature disabled. - &quot;on&quot;: Binary AST enabled. - &quot;latest&quot;: Binary AST enabled using the latest version.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-15">Responses</h4>
+<h5 id="200-change-binary-ast-setting-response" class="status" data-status="2xx">200: Change Binary AST setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-binary-ast-setting-response-failure">4XX: Change Binary AST setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsfonts" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/fonts</h3>
+<p>Operation ID: <code>zone-settings-change-fonts-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-16">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-4">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: on, off</code></td>
+<td>Yes</td>
+<td>Whether the feature is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-16">Responses</h4>
+<h5 id="200-change-cloudflare-fonts-setting-response" class="status" data-status="2xx">200: Change Cloudflare Fonts setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-cloudflare-fonts-setting-response-failure">4XX: Change Cloudflare Fonts setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsh2_prioritization" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/h2_prioritization</h3>
+<p>Operation ID: <code>zone-settings-change-h2-prioritization-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-17">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-5">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: off, on, custom</code></td>
+<td>Yes</td>
+<td>Controls HTTP/2 Prioritization behavior: - &quot;off&quot;: Use browser default prioritization. - &quot;on&quot;: Use Cloudflare's optimized prioritization. - &quot;custom&quot;: Use custom prioritization rules.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-17">Responses</h4>
+<h5 id="200-change-http2-prioritization-setting-response" class="status" data-status="2xx">200: Change HTTP/2 Prioritization setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-http2-prioritization-setting-response-failure">4XX: Change HTTP/2 Prioritization setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsimage_resizing" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/image_resizing</h3>
+<p>Operation ID: <code>zone-settings-change-image-resizing-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-18">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-6">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: off, on, open, latest</code></td>
+<td>Yes</td>
+<td>Controls Image Resizing behavior: - &quot;off&quot;: Feature disabled. - &quot;on&quot;: Resizing is enabled for same-zone images only. - &quot;open&quot;: Resizing is enabled for images from any origin. - &quot;latest&quot;: Resizing is enabled for same-zone images using the latest version.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-18">Responses</h4>
+<h5 id="200-change-image-resizing-setting-response" class="status" data-status="2xx">200: Change Image Resizing setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-image-resizing-setting-response-failure">4XX: Change Image Resizing setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsorigin_max_http_version" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/origin_max_http_version</h3>
+<p>Operation ID: <code>zone-cache-settings-change-origin-max-http-version-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-19">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-7">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: 2, 1</code></td>
+<td>Yes</td>
+<td>Value of the Origin Max HTTP Version Setting.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-19">Responses</h4>
+<h5 id="200-change-origin-max-http-version-setting-response" class="status" data-status="2xx">200: Change Origin Max HTTP Version setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-change-origin-max-http-version-response-failure">4XX: Change Origin Max HTTP Version response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingsspeed_brain" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/speed_brain</h3>
+<p>Operation ID: <code>zone-settings-change-speed-brain-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-20">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-8">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: on, off</code></td>
+<td>Yes</td>
+<td>Whether the feature is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-20">Responses</h4>
+<h5 id="200-cloudflare-speed-brain-setting-response" class="status" data-status="2xx">200: Cloudflare Speed Brain setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-cloudflare-speed-brain-setting-response-failure">4XX: Change Cloudflare Speed Brain setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingstransformations_allowed_origins" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/transformations_allowed_origins</h3>
+<p>Operation ID: <code>zone-settings-change-transformations-allowed-origins-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-21">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-9">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Comma-separated list of allowed origin domains for image and video transformations. Use &quot;*&quot; to allow all origins (default).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-21">Responses</h4>
+<h5 id="200-change-image-transformations-allowed-origins-setting-response" class="status" data-status="2xx">200: Change Image Transformations Allowed Origins setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-image-transformations-allowed-origins-setting-response-failure">4XX: Change Image Transformations Allowed Origins setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingstransformations_c2pa" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/transformations_c2pa</h3>
+<p>Operation ID: <code>zone-settings-change-transformations-c2pa-setting</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-22">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-10">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>enum: off, on</code></td>
+<td>Yes</td>
+<td>Whether C2PA signing is enabled for image transformations.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-22">Responses</h4>
+<h5 id="200-change-image-transformations-c2pa-setting-response" class="status" data-status="2xx">200: Change Image Transformations C2PA setting response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-image-transformations-c2pa-setting-response-failure">4XX: Change Image Transformations C2PA setting response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idsettingstransformations_config" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/settings/transformations_config</h3>
+<p>Operation ID: <code>zone-settings-change-transformations-config</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-23">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-11">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td>Combined configuration value for Transformations. All fields are optional on PATCH; omitted fields are left unchanged.</td>
+</tr>
+<tr>
+<td><code>value.allowed_origins</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>Comma-separated list of allowed origin domains for image and video transformations. Use &quot;*&quot; to allow all origins (default).</td>
+</tr>
+<tr>
+<td><code>value.c2pa</code></td>
+<td><code>enum: off, on</code></td>
+<td>No</td>
+<td>Whether C2PA signing is enabled for image transformations.</td>
+</tr>
+<tr>
+<td><code>value.transformations</code></td>
+<td><code>enum: off, on, open, latest</code></td>
+<td>No</td>
+<td>Controls Image Transformations behavior: - &quot;off&quot;: Feature disabled. - &quot;on&quot;: Transformations enabled for same-zone images only. - &quot;open&quot;: Transformations enabled for images from any origin. - &quot;latest&quot;: Transformations enabled using the latest version.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-23">Responses</h4>
+<h5 id="200-change-transformations-configuration-response" class="status" data-status="2xx">200: Change Transformations configuration response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-change-transformations-configuration-response-failure">4XX: Change Transformations configuration response failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+</main></div>
+<script src="../assets/search.js" defer></script></body></html>
